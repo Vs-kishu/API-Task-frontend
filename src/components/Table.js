@@ -138,7 +138,7 @@ const TableComponent = () => {
           onChange={(e) => setEditedData({ ...editedData, name: e.target.value })}
         />
         <input
-          type="text"
+          type="number"
           placeholder="Age"
           value={editedData.age}
           onChange={(e) => setEditedData({ ...editedData, age: e.target.value })}
