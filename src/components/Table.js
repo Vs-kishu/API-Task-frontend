@@ -65,7 +65,7 @@ const TableComponent = () => {
   const handleSave = async (id) => {
     console.log(id);
     try {
-      await fetch(`https://api-task-backend.vercel.app/update/${id}`, {
+      await fetch(`https://api-task-backend.vercel.app/api/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
