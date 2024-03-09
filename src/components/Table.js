@@ -19,7 +19,7 @@ const TableComponent = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/data/${userId}`);
+      const response = await fetch(`https://api-task-backend.vercel.app/api/data/${userId}`);
       const jsonData = await response.json();
       console.log(jsonData);
       setData(jsonData.allData.table);
@@ -34,7 +34,7 @@ const TableComponent = () => {
 
   const handleAdd = async () => {
     try {
-      await fetch(`http://localhost:3001/api/add`, {
+      await fetch(`https://api-task-backend.vercel.app/api/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const TableComponent = () => {
   const handleSave = async (id) => {
     console.log(id);
     try {
-      await fetch(`http://localhost:3001/api/update/${id}`, {
+      await fetch(`https://api-task-backend.vercel.app/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
